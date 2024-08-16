@@ -1,0 +1,95 @@
+<!-- itemDetails.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.item-details {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Item Details</h1>
+    <% if (item) { %>
+        <div class="item-details">
+            <div class="image">
+                <img src="<%= item.url %>" alt="<%= item.Model %>" height="150px" width="100%">
+            </div>
+            <div class="title"><%= item.Model %></div>
+            <div class="description">
+                <p><strong>Brand:</strong> <%= item.Brand %></p>
+                <p><strong>Price:</strong> &#8377;<%= item.Price.toLocaleString() %></p>
+                <p><strong>Year of Buy:</strong> <%= item.Year_ofBuy %></p>
+                <p><strong>Description:</strong> <%= item.Description %></p>
+                <!-- Add other product details here -->
+            </div>
+        </div>
+        <a href="/order/<%= item._id %>"><button>Order</button></a>
+        <% } else { %>
+        <p>Item not found.</p>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selling Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url("C:\Users\Tarun\Desktop\fsfd\public\/img\movies\360_F_541600263_frRX0Fxh8x5kQDddJG9u4Q1MNwFmknEX.jpg");
+  }
+  
+  .container {
+    width: 500px; /* Increased width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group select,
+  .form-group textarea {
+    width: calc(100% - 16px); /* Adjusted width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px; /* Increased font size */
+  }
+
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+
+  .user-count {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .user-count h3 {
+    margin-bottom: 10px;
+  }
+
+  .user-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .user-buttons button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  /* .photo-preview {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .photo-preview .photo-box {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .photo-preview .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photo-preview .photo-box .upload-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  .photo-preview .photo-box .upload-icon:hover {
+    color: #007bff;
+  }
+
+  .photo-preview .photo-box .remove-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff0000;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; */
+  /* } */
+</style>
+</head>
+<body>
+  <form action="/2" method="post">
+<div class="container">
+  <h2>Car Selling Form</h2>
+  <div class="user-count">
+    <h3>Number of Users:</h3>
+    <div class="user-buttons">
+      <button class="user-btn">1</button>
+      <button class="user-btn">2</button>
+      <button class="user-btn">3</button>
+      <button class="user-btn">4</button>
+      <button class="user-btn">4+</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="brand">Select Brand:</label>
+    <select id="brand" name="brand">
+      <option value="">Select Brand</option>
+      <option value="yamaha">Yamaha</option>
+      <option value="tata">Tata</option>
+      <option value="jaguar">Jaguar</option>
+      <option value="rr">RR</option>
+      Add more options as needed
+    </select>
+    <!-- <input type="text" id="brand" name="brand" required> -->
+  </div>
+  <div class="form-group">
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" required>
+  </div>
+  <div class="form-group">
+    <label for="itemType">Item Type:</label>
+    <input type="text" id="itemType" name="itemType" required>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required>
+  </div>
+  <div class="form-group">
+    <label for="year">Year of Buy:</label>
+    <input type="text" id="year" name="year" required>
+  </div>
+  <div class="form-group">
+    <label for="type">Type:</label>
+    <input type="text" id="type" name="type" required>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+  </div>
+ 
+  <div class="form-group">
+    <label for="photos">Upload Photos:</label>
+    <div class="photo-preview" id="photoPreview">
+      <div class="photo-box" id="photoBox1">
+        <label for="photo1" class="upload-icon">+</label>
+        <input type="text" id="photo1" name="photos">
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn-submit">Submit</button>
+</div>
+</form>
+</body>
+<script>
+  const userButtons = document.querySelectorAll('.user-btn');
+  const fuelTypeButtons = document.querySelectorAll('.fuel-type-btn');
+  const fuelTypeInput = document.getElementById('fuelType');
+
+  userButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      userButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+    });
+  });
+
+  fuelTypeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      fuelTypeButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+      fuelTypeInput.value = button.textContent.trim();
+    });
+  });
+</script>
+
+</body>
+</html>

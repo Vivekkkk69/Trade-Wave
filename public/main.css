@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+   
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    display: flex;
+    color: #fff;
+    z-index: 5;
+   font-size: 20px;
+    align-items: center;
+    letter-spacing: 0.5px;
+   
+}
+
+.logo{
+    background-image: url("images/logo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60px;
+    width: 150px;
+    z-index: 10;
+    margin-top: 5px;
+    align-self:self-start;
+}
+
+
+.aboutus{
+    margin-left: 400px;
+    
+}
+
+.login{
+    margin-left: 300px;
+}
+.nav{
+    margin-left: 25px;
+}
+.main{
+    position: relative;
+    top: 70px;
+    
+}
+
+.navcontent:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.buyers{
+    
+    background-color: black;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buycontent{
+    width: 400px;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.buyerimage{
+    height: 600px;
+    width: 1100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px;
+    background-image: url("images/buyers.avif");
+    background-size: cover;
+
+}
+
+.sellers{
+    background-color: black;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.individualseller{
+    width:40% ;
+    height: 400px;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+
+.individualimage{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius:17px; 
+    border-top-right-radius:17px;
+    background-image: url("images/individualseller.jpg");
+    background-size: cover;
+    
+}
+.individualcontent{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.bulkseller{
+    width:40% ;
+    height: 400px;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+
+.bulkimage{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius:17px; 
+    border-top-right-radius:17px;
+    background-image: url("images/Companyselling.jpeg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.bulkcontent{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.auction{
+    background-color: black;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auctionimage{
+    height: 600px;
+    width: 1100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px;
+    background-image: url("images/auctionmain.jpeg");
+    background-size: cover;
+}
+
+.auctioncontent{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    width: 400px;
+}
+
+.extrainfo{
+    background-color: black;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.marketing{
+    width:40% ;
+    height: 400px;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+
+.marketingimage{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius:17px; 
+    border-top-right-radius:17px;
+    background-image: url("images/marketing.jpg");
+    background-size: cover;
+    
+}
+.marketingcontent{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.twohand{
+    width:40% ;
+    height: 400px;
+    border:2px solid #fff;
+    border-radius: 20px;
+}
+
+.twohandimage{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius:17px; 
+    border-top-right-radius:17px;
+    background-image: url("images/2ndHand.jpg");
+    background-size: cover;
+    
+}
+.twohandcontent{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+footer{
+    position: absolute;
+    
+}
+
+.heading{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18),
+    cursor .4s step-end infinite alternate;
+    
+}
+
+@keyframes typing {
+     from {width: 0;}
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+

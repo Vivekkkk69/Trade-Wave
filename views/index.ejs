@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Wave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <div class="preloader" id="preload"></div>
+    <div class="navbar">
+        <div class="navlogo border">
+            <div class="logo">
+            </div>
+        </div>
+
+        <div class="navaddress border">
+            <p class="addr1">Deliver to</p>
+            <div class="address-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="addr2" id="addr2">India</p>
+            </div>
+        </div>
+       
+        <div class="navsearch">
+          <form action="/search" action="GET">
+            <div class="formElements">
+              <label for="itemType"></label>
+              <select name="itemType" id="itemType" class="searchselect" >
+                <option value="all">All</option>
+                <option value="Car">Cars</option>
+                <option value="bikes">Bikes</option>
+                <option value="mobiles">Mobiles</option>
+                <option value="furniture">Furniture</option>
+                <option value="clothes">Clothes</option>
+                <option value="electronics">Electronics</option>
+              </select>
+            <label for="model"></label>
+              <input type="text" id="model" name="model" placeholder="    Search Cars,Bikes,Mobiles......" class="searchinput">
+              <div class="searchicon">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+              </div>
+            </div>
+            
+          </form>
+
+         
+        </div>
+
+        <div class="auctionspace border">
+             <a href="/auction" style="color: white; text-decoration: none;">Auction Space</a>
+        </div>
+
+        <div class="userinfo">
+            <div class="message" id="messages"><i class="fa-solid fa-message"></i></div>
+            <div class="notificationdorpdown">
+              <div class="notification"><i class="fa-solid fa-bell"></i></div>
+              <div class="notificationcontent">
+                <p>No Notifications</p>
+               
+              </div>
+            </div>
+            
+            <div class="accountdropdown">
+              <div class="account"><i class="fa-solid fa-circle-user"></i></div>
+              <div class="accountcontent">
+                  <p>Username</p>
+                   <p>ADS</p>
+                   <p>Help </p>
+                   <a href="/" style="color: white; text-decoration: none;">Logout</a>
+              </div>
+            </div>
+          
+        </div>
+        
+        <div class="sell border">
+          <a href="/sell" style="text-decoration: none; color: white;">Sell</a>
+        </div>
+
+    </div>
+</header>
+
+
+<div class="slider">
+  <div class="slides">
+      <img src="images/new car.png" alt="" class="slide"  height="500px">
+      <img src="/images/heycar.jpeg" alt="" class="slide"  height="500px">
+      <img src="/images/love.jpg" alt="" class="slide"  height="500px">
+      <img src="/images/.jpg" alt="" class="slide"  height="500px">
+  </div>
+  <button class="prev" onclick="prevSlide()">&#10094</button>
+  <button class="next" onclick="nextSlide()">&#10095</button>
+</div>
+
+ <div class="main_content">
+  <% items.forEach(function(item) { %>
+    <div class="cards">
+        <div class="image">
+            <img src="<%= item.url %>" alt="<%= item.Model %>" height="150px" width="100%">
+        </div>
+        <div class="title"><%= item.Model %></div>
+        <div class="description">
+            <div class="price">
+                Price: &#8377;<%= item.Price.toLocaleString() %>
+            </div>
+            <!-- Add other product details here -->
+            <button class="buy"><a href="/item/<%= item._id %>">Buy now</a></button>
+        </div>
+    </div>
+<% }); %>
+      <div class="cards">
+        <div class="image">
+            <img src="/images/5.jpg" alt="">
+        </div>
+        <div class="title">Volvo XC90</div>
+        <div class="description">
+            <p>   </p>
+            <button class="buy">Buy Now</button>
+        </div>
+      </div>
+
+
+    <a href="#" class="totop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <button class="loadmore">Load More</button>
+
+    <footer class="footer">
+      <ul>
+        <p>Popular Locations</p>
+        <a href="">Kolkata</a>
+        <a href="">Mumbai</a>
+        <a href="">Chennai</a>
+        <a href="">Pune</a>
+        <a href="">Hyderabad</a>
+        <a href=""></a>
+      </ul>
+       
+      <ul>
+        <p>Marketing</p>
+        <a href="">Contact us</a>
+        <a href="">Marketing manager</a>
+        <a href=""></a>
+        <a href=""></a>
+      </ul>
+
+      <ul>
+        <p><a href="/contact" style="color: black; text-decoration: none;">Contact Us</a></p>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </ul>
+
+      <ul>
+        <p><a href="/aboutus" style="color: black; text-decoration: none;">About us</a></p>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </ul>
+
+    </footer>
+ 
+<script src="/app.js"></script>
+</body>
+</html>

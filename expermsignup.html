@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+   
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    display: flex;
+    color: #fff;
+    z-index: 5;
+   font-size: 20px;
+    align-items: center;
+    letter-spacing: 0.5px;
+   
+}
+
+.logo{
+    background-image: url("images/logo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60px;
+    width: 150px;
+    z-index: 10;
+    margin-top: 5px;
+    align-self:self-start;
+}
+
+
+.aboutus{
+    margin-left: 400px;
+    
+}
+
+.signup{
+    margin-left: 300px;
+}
+.nav{
+    margin-left: 25px;
+}
+
+.navcontent:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.main{
+    position: relative;
+    top: 70px;
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    color: #fff;
+}
+
+.login{
+   height: 500px;
+   width: 500px;
+   border: 2px solid #fff;
+   position: relative;
+   left: 900px;
+   top: 70px;
+   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+.inputform{
+    position: relative;
+    margin: 30px;
+    border-bottom: 2px solid #fff;
+} 
+ 
+
+
+.inputform label{
+ position: absolute;
+ top: 40%;
+  left: 15px;
+ font-size: 18px;
+ transform: translateY(-50%);
+ pointer-events: none;
+ transition: .5s;
+}
+
+.inputform input{
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+   
+}
+.container{
+  transition: bottom 1s ease; /* Animation transition */
+  margin-top: 70px;   
+  height: 400px;
+  position: relative;
+}
+.inputform input:focus~label{
+    top: -5px;
+}
+.remember{
+  margin-left: 30px;
+  margin-top: -5px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+}
+
+.remember label{
+    font-size: 14px;
+}
+
+.remember label input{
+    accent-color: #0ef;
+}
+
+#loginbtn{
+    position: relative;
+    width: 80%;
+    left: 40px;
+    height: 40px;
+    background-color:#0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#c{
+overflow: hidden;
+  height: 500px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 60vw;
+    border: solid white;
+    transition: scroll-behavior 0.5s ease; /* Add transition for smooth scrolling */
+
+  }
+.signUp-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link p a{
+   color: #0ef;
+   text-decoration: none;
+}
+
+.signUp-link p a:hover{
+    text-decoration: underline;
+ }
+
+ .buyer{
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    top: 90px;
+    left: 30px;
+    height: 250px;
+    width: 300px;
+    border: 2px solid white;
+
+}
+.buyerimage{
+    width: 100%;
+    height:200px;
+    background-image: url("/images/loginbuyer.webp");
+    background-size: cover;
+}
+#Buyer{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: none;
+    color: aqua;
+}
+#Buyer:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.seller{
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    top: -160px;
+    left: 350px;
+
+    height: 250px;
+    width: 300px;
+    border: 2px solid white;
+}
+.sellerimage{
+    width: 100%;
+    height:200px;
+    background-image: url("/images/trustedseller.jpg");
+    background-size: cover;
+}
+#Seller{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: none;
+    color:aqua ;
+}
+#Seller:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.selectlogin{
+    position: absolute;
+}
+
+.mainlogincontainer{   
+    height: 573px;
+    margin-top: -400px;
+    /* overflow: hidden; */
+}
+#a{ position: relative; }
+#b{ position: relative;}
+.animaton{
+  animation: anim 2s 1 ;
+}
+
+@keyframes anim {
+  0%{
+    bottom: 0;
+    bottom: 0;
+  } 100%{
+    bottom: 500px;
+    bottom: 500px;
+  }
+}
+</style>
+<body>
+    <div class="navbar">
+        <div class="logo  navcontent">
+         
+        </div>
+
+
+        <div class="aboutus navcontent">
+           About Us
+        </div>
+
+        <div class="marketing-team nav navcontent">
+           Marketing Team
+        </div>
+
+        <div class="carrers nav navcontent">
+           Carrers
+        </div>
+
+        <div class="contactus nav navcontent">
+           Contact Us
+        </div>
+        <!-- <div class="login navcontent">
+           Login
+      </div> -->
+
+      <div class="signup  navcontent">
+          <a href="/login" style="text-decoration: none; color: #fff;">Login</a>
+      </div>
+
+   </div>
+
+    <div class="main">
+
+        <div class="buyer">
+            <div class="buyerimage"></div>
+            <p style="display: inline; font-size: 20px;">Click  for seller Sign Up</p>
+            <button id="Buyer" class="selcectlogin">Buyer</button>
+        </div>
+        <div class="seller">
+            <div class="sellerimage"></div>
+            <p style="display: inline; font-size: 20px;">Click  for buyer SignUp</p>
+            <button id="Seller" class="selcectlogin">Seller</button>
+        </div>
+        
+     
+
+    <div class="mainlogincontainer">
+     <div style="flex-direction: column;" id="c">
+         <div class="container signIn " id="a" >
+          <form action="/signup" method="post">
+            <h2>Buyer SignUP</h2>
+            <div class="inputform">
+                <input name="email" type="email"  id="loginemail" >
+                <label for="loginemail">Email</label>
+            </div>
+            <div class="inputform">
+                <input name="password" type="password"  id="password" >
+                <label for="password">Password</label>
+            </div>
+            <div class="remember">
+                <label for=""><input type="checkbox" name="" id=""> Remember me</label>
+            </div>
+            <button type="submit" id="loginbtn">Sign Up</button>
+            <div class="signUp-link">
+                <p>Want to login? <a href="/login" class="signUpBtn-link">Sign In</a></p>
+            </div>
+        </form>
+          </div>
+          <div class="container signIn" id="b" >
+            <form action="/sellersignup" method="post">
+            <h2>Seler SignUP</h2>
+            <div class="inputform">
+                <input type="email" name="email" id="loginemail" >
+                <label for="loginemail">Email</label>
+            </div>
+            <div class="inputform">
+                <input type="password" name="pass" id="password" >
+                <label for="password">Password</label>
+            </div>
+            <div class="remember">
+                <label for=""><input type="checkbox" name="" id=""> Remember me</label>
+            </div>
+            <button type="submit" id="loginbtn">Sign Up</button>
+            <div class="signUp-link">
+                <p>Want to login? <a href="/login" class="signUpBtn-link">Sign In</a></p>
+            </div>
+            </form>
+          </div>
+           
+          
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="login.js"></script>
+</body>
+</html>
+<script>
+function scrollToTop() {
+    var container = document.getElementById("c");
+    var currentPosition = container.scrollTop;
+    var targetPosition = 0;
+    var distance = targetPosition - currentPosition;
+    var duration = 500; // Transition duration in milliseconds
+    var startTime = null;
+
+    function animateScroll(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = timestamp - startTime;
+        container.scrollTop = easeInOut(progress, currentPosition, distance, duration);
+        if (progress < duration) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    function easeInOut(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
+function scrollToBottom() {
+    var container = document.getElementById("c");
+    var currentPosition = container.scrollTop;
+    var targetPosition = container.scrollHeight - container.clientHeight;
+    var distance = targetPosition - currentPosition;
+    var duration = 500; // Transition duration in milliseconds
+    var startTime = null;
+
+    function animateScroll(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = timestamp - startTime;
+        container.scrollTop = easeInOut(progress, currentPosition, distance, duration);
+        if (progress < duration) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    function easeInOut(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
+document.getElementById("Buyer").addEventListener("click", scrollToTop);
+document.getElementById("Seller").addEventListener("click", scrollToBottom);
+
+
+//  document.getElementById("Buyer").addEventListener("click", function(){
+//   document.getElementById("a").style.bottom = 0
+//             document.getElementById("b").style.bottom = 0
+//     for (let i = 0; i < 5; i++) {
+//         setTimeout(() => {
+//             document.getElementById("a").style.top = 100 * (i + 1) + "px";
+//             document.getElementById("b").style.top = 100 * (i + 1) + "px";
+//         }, 100 * (i + 1));
+//     }
+// });
+
+</script>

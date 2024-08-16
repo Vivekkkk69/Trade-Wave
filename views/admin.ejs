@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admincardscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+   
+    </style>
+</head>
+<body>
+    <h1>Welcome Admin</h1>
+    <div class="admincardscontainer">
+     
+       <div class="cards" style="margin-left: 100px;">
+        <h2 style="margin-left: 40px;">Item </h2>
+        <form action="/additems" method="post">
+            <label for="foritem">Enter Item 1:</label>
+            <input name="url1" type="text" id="foritem">
+            <br>
+            <br>
+            <label for="name">Enter Name:</label>
+            <input name="name1" type="text" id="name">
+             <br><br>
+            <label for="description">Enter Description:</label>
+            <br>
+            <input name="description1" type="text" id="description" style="width: 350px; height: 60px;" >
+            <br><br>
+            <label for="maxprice">Maxprice:</label>
+             <input name="maxprice1" type="text" id="maxprice">
+             <br><br>
+            <label for="foritem">Enter Item 2:</label>
+            <input name="url2" type="text" id="foritem">
+            <br>
+            <br>
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" name="name2">
+             <br><br>
+            <label for="description">Enter Description:</label>
+            <br>
+            <input name="description2" type="text" id="description" style="width: 350px; height: 60px;" >
+            <br><br>
+            <label for="maxprice">Maxprice:</label>
+             <input name="maxprice2" type="text" id="maxprice">
+             <br><br>
+            <label for="foritem">Enter Item 3:</label>
+            <input name="url3" type="text" id="foritem">
+            <br>
+            <br>
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" name="name3">
+             <br><br>
+            <label for="description">Enter Description:</label>
+            <br>
+            <input name="description3" type="text" id="description" style="width: 350px; height: 60px;" >
+            <br><br>
+            <label for="maxprice">Maxprice:</label>
+             <input name="maxprice3" type="text" id="maxprice">
+             <br><br>
+            <label for="foritem">Enter Item 4:</label>
+            <input name="url4" type="text" id="foritem">
+            <br>
+            <br>
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" name="name4">
+             <br><br>
+            <label for="description">Enter Description:</label>
+            <br>
+            <input name="description4" type="text" id="description" style="width: 350px; height: 60px;" >
+            <br><br>
+            <label for="maxprice">Maxprice:</label>
+             <input name="maxprice4" type="text" id="maxprice">
+             <br><br>
+            <label for="foritem">Enter Item 5:</label>
+            <input name="url5" type="text" id="foritem">
+            <br>
+            <br>
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" name="name5">
+             <br><br>
+            <label for="description">Enter Description:</label>
+            <br>
+            <input name="description5" type="text" id="description" style="width: 350px; height: 60px;" >
+            <br><br>
+            <label for="maxprice">Maxprice:</label>
+             <input name="maxprice5" type="text" id="maxprice">
+             <br><br>
+              <button type="submit" style="margin-left:250px;">Post</button> <br><br>
+        </form>
+       </div>
+       
+       
+       
+     
+    </div>
+    
+</body>
+</html>

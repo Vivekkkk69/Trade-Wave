@@ -1,0 +1,123 @@
+/* Resetting default styles */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif; /* Provide a fallback font */
+}
+
+/* Navbar Styling */
+.navbar {
+    height: 60px;
+    background-color: #333; /* Dark background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spacing between items */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.navlogo {
+    height: 50px;
+    width: 80px;
+    margin-left: 20px; /* Adjust margin */
+}
+
+/* Heading Styling */
+.heading {
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center; /* Center align */
+}
+
+/* Container Div Styling */
+.containerdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px; /* Increase top margin for space */
+}
+
+.itemdescriptionselection {
+    width: 90%;
+    max-width: 1200px; /* Limit maximum width */
+    height: 600px;
+    border: 1px solid #ddd; /* Add subtle border */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: relative;
+}
+
+.selectcategory {
+    width: 100%;
+    text-align: center; /* Center align */
+}
+
+/* File Input Styling */
+#file {
+    display: none;
+}
+
+/* Post Button Styling */
+#Post {
+    width: 100px;
+    height: 40px; /* Increase height for better clickability */
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#Post:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Other Element Styling */
+.Brand,
+#Brand,
+.title,
+.description,
+.Price,
+.State {
+    margin-left: 20px; /* Adjust margin */
+}
+
+.preloader {
+    background: #fff url('preloader.gif') no-repeat center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dabba {
+    height: 200px;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: #333; /* Darker text color */
+    margin-top: 50px; /* Adjust margin */
+}
+
+.dabba p {
+    font-size: 20px;
+    color: #666; /* Lighter text color */
+}

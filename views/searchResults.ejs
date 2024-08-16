@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <style>
+/* Elegant Gradient Background */
+body {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #5d5d5d; /* Updated text color for better contrast */
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stylish Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Content Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+ul {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Enhanced List Item Styling */
+li {
+  border: none;
+  margin-bottom: 25px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect on the background */
+  border-left: 5px solid #ff7f50; /* Accent border */
+}
+
+/* Interactive Hover Effects */
+li:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+/* Image Styling */
+img {
+  width: 100%;
+  max-width: 250px; 
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Smaller title on mobile */
+  }
+  li {
+    flex-direction: row; /* Horizontal layout on mobile */
+  }
+  img {
+    margin-right: 15px; /* Space between image and text on mobile */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1>search results</h1>
+  
+  <% if (products.length === 0) { %>
+    <p>No results found.</p>
+  <% } else { %>
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <h2><%= product.name %></h2>
+          <p><strong>Category:</strong> <%= product.Brand %></p>
+          <p><strong>Description:</strong> <%= product.Model %></p>
+          <p><strong>Price:</strong> <%= product.Price %></p>
+          <p><strong>Year Of Buy:</strong> <%= product.Year_ofBuy %></p>
+          <p><strong>Description:</strong> <%= product.Description %></p>
+          <p><strong>Image:</strong> <img src="<%= product.url %>" alt="photo"></p>
+          <p><strong>Item Type:</strong> <%= product.itemType %></p>
+        </li>
+      <% }); %>
+    </ul>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction</title>
+    <!-- <link rel="stylesheet" href="/auctionstyle.css"> -->
+</head>
+<body>
+        <!-- header -->
+    <header>
+        <div class="logo">TRADEWAVE AUCTION</div>
+    </header>
+<style>
+    /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* Slider container */
+/* Slider container */
+.slider {
+    margin: 20px auto;
+    position: relative;
+    /* width: 900px; Set width to 900px */
+    height: 1000px; /* Set height to 1000px */
+    overflow: hidden; /* Hide content that overflows */
+}
+
+
+/* List items */
+.list {
+    display: flex;
+    overflow-x: auto;
+    height: 600px;
+    width: 100vw;
+}
+
+.item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.item img {
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item .content {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item .content h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item .content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.item .content button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item .content button:hover {
+    background-color: #555;
+}
+
+/* Thumbnail */
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnail .item {
+    flex: 0 0 auto;
+    margin-right: 5px;
+}
+
+.thumbnail .item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thumbnail .item.active img {
+    border: 2px solid #333;
+}
+
+</style>
+    <!-- slider -->
+
+    <div class="slider" >
+        <!-- list Items -->
+        <div class="list">
+            <% for(let i = Math.max(items.length - 5, 0); i < items.length; i++) { %>
+                <div class="item active">
+                    <img src="<%= items[i].url %>">
+                    <div class="content">
+                        <!-- <h2><%= items[i].name %></h2> -->
+                        <!-- <p><%= items[i].description %></p> -->
+                       <a href="/auctionroom/<%=items[i]._id %>"> <button>Join Now</button> </a>
+                    </div>
+                </div>
+            <% } %>
+            
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <% for(let i = Math.max(items.length - 5, 0); i < items.length; i++) { %>
+                <div class="item <%= i === items.length - 1 ? 'active' : '' %>">
+                    <img src="<%= items[i].url %>">
+                    <div class="content">
+                        <%= items[i].name %>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        
+
+    <!-- <script src="/auction.js"></script> -->
+</body>
+</html>

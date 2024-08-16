@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/auctionroom.css">
+</head>
+<body>
+    
+    <h1>Auction Room</h1>
+    <div class="container">
+      <!-- Auction Image -->
+      <div class="auctionimage cont" style="margin-left: 5%; margin-top: 20px;">
+          <img width="100%" src="<%= item.url %>" alt="Auction Image">
+      </div>
+
+      <!-- Bidder Image and Current Bid -->
+      <div class="maxprice cont" style="margin-left: 10%; margin-top: 20px;">
+          <div class="currentbid" height="300px">
+             Max Bid
+          </div>
+          <div class="currentbidrate" style="margin-left: 300px; margin-top: 100px; font-size: 30px;">
+              <!-- Render current bid rate if available -->
+              &#8377;<%= item.maxprice %>
+          </div>
+      </div>
+
+      <!-- Auction Details -->
+      <div class="auctiondetails cont" style="margin-left: 5%; margin-top: 50px;">
+          <div class="name">
+              <%= item.name %>
+          </div>
+          <div class="description">
+              <%= item.description %>
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
